@@ -1,6 +1,8 @@
 
 # Marvelmind Indoor GPS (Configuration and ROS 2)
 
+![image](https://github.com/user-attachments/assets/331ce079-19c9-46e2-9972-cdfedc97bbee)
+
 ## Introduction
 
 [Marvelmind Indoor Navigation System](https://marvelmind.com/) is an indoor navigation system that
