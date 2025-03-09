@@ -38,6 +38,7 @@ cd /home/src/x86
 ./dashboard_x86
 
 ```
+![image](https://github.com/user-attachments/assets/71b39b09-0f13-4b75-b6cb-0d02a47e6a9c)
 
 
 
