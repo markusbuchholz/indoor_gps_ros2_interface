@@ -54,6 +54,17 @@ source install/source.bash
 ros2 launch marvelmind_ros2 marvelmind_ros2.launch.py
 ```
 
+## Launch filter
+
+The filter smooths data from the topic /hedgehog_pos and map to /hedgehog_pos_fileter.
+
+```bash
+cd marvelmind_extras
+
+python3 ros2_boat_gps_filer.py
+```
+
+
 ROS 2 topics:
 
 ```bash
