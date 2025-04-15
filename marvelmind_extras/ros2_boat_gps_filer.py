@@ -18,7 +18,7 @@ class HedgehogPosFilterNode(Node):
         self.subscription  # Prevent unused variable warning
 
         # Publisher: filtered output on /hedgehog_pos_filter topic
-        self.publisher = self.create_publisher(HedgePosition, '/hedgehog_pos_filter', 10)
+        self.publisher = self.create_publisher(HedgePosition, '/hedgehog_pos_filtered', 10)
 
         # alpha is the smoothing factor [0, 1]: smaller values lead to slower response.
         ################
