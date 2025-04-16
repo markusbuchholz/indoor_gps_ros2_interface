@@ -9,16 +9,16 @@ class HedgehogPosFilterNode(Node):
     def __init__(self):
         super().__init__('hedgehog_pos_filter_node')
 
-        # Subscriber: listen to /hedgehog_pos topic for HedgePosition messages.
+
         self.subscription = self.create_subscription(
             HedgePosition,
             '/hedgehog_pos',
             self.hedgehog_pos_callback,
             10
         )
-        self.subscription  # prevent unused variable warning
+        self.subscription  # 
 
-        # Publisher: filtered output on /hedgehog_pos_filtered topic.
+       
         self.publisher = self.create_publisher(HedgePosition, '/hedgehog_pos_filtered', 10)
 
         # Exponential moving average (EMA) parameter for Hedgehog positions.
