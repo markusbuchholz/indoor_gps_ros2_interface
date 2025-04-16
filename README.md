@@ -61,7 +61,7 @@ The filter smooths data from the topic /hedgehog_pos and map to /hedgehog_pos_fi
 ```bash
 cd marvelmind_extras
 
-python3 ros2_boat_gps_filer.py
+python3 ros2_boat_pos_yaw_filered.py
 ```
 
 
