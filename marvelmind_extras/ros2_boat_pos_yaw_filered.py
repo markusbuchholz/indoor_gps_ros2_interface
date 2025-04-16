@@ -21,8 +21,9 @@ class HedgehogPosFilterNode(Node):
        
         self.publisher = self.create_publisher(HedgePosition, '/hedgehog_pos_filtered', 10)
 
-        # Exponential moving average (EMA) parameter for Hedgehog positions.
-        # alpha is the smoothing factor [0, 1]: smaller values lead to slower response.
+        ###############
+        ###############
+        ###############
         self.alpha = 0.1
 
         # Initialize EMA values for Hedgehog (will be set with the first message).
@@ -30,8 +31,9 @@ class HedgehogPosFilterNode(Node):
         self.filtered_y = None
         self.filtered_z = None
 
-        # Configure moving average filter parameters for Hedgehog.
-        # window_size defines the number of recent EMA values to average.
+        ###############
+        ###############
+        ###############
         self.window_size = 10  # Adjust as needed.
 
         # Deques for storing the EMA outputs before averaging for Hedgehog.
@@ -43,8 +45,7 @@ class HedgehogPosFilterNode(Node):
         self.last_msg = None
 
         # --------------------------------------------
-        # Add subscriber and filter for the IMU Compass data.
-        # Subscribe to /bluebot/imu_compass_fused of type Float32.
+
         self.imu_subscription = self.create_subscription(
             Float32,
             '/bluebot/imu_compass_fused',
@@ -62,15 +63,19 @@ class HedgehogPosFilterNode(Node):
         # Initialize EMA value for the IMU compass.
         self.imu_filtered = None
 
-        # Configure moving average filter parameters for the IMU compass.
+        ###############
+        ###############
+        ###############.
         self.imu_window_size = 20  # Number of recent EMA values to average.
         self.imu_window = deque(maxlen=self.imu_window_size)
 
-        # Offset added to the filtered IMU compass value.
+        ###############
+        ###############
+        ###############
         self.imu_offset = 70.0  # Can be adjusted as needed.
 
         # --------------------------------------------
-        # Timer to publish filtered messages regularly, even if no new raw data arrives.
+
         self.timer = self.create_timer(0.1, self.timer_callback)  # Publishing at 10 Hz
 
     def hedgehog_pos_callback(self, msg: HedgePosition):
