@@ -1,5 +1,5 @@
 
-# Marvelmind Indoor GPS (Configuration and ROS 2)
+# Marvelmind Indoor GPS for ROS 2
 
 ![image](https://github.com/user-attachments/assets/331ce079-19c9-46e2-9972-cdfedc97bbee)
 
