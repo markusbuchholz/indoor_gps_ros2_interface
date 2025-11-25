@@ -27,13 +27,20 @@ sudo ./build.sh
 ```
 
 ## Run
-
+Note: Adjust the path in the ```run.sh```
 ```bash 
 
 
 sudo ./run.sh
 
-cd /home/src/x86
+```
+## Run application (on Host - not in Docker)
+
+```basg
+cd indoor_gps_ros2_interface/src/x86/
+
+# Copy libdashapi.so to /usr/local/lib
+sudo cp libdashapi.so /usr/local/lib
 
 ./dashboard_x86
 
