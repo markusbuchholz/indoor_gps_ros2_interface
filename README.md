@@ -40,7 +40,10 @@ sudo ./run.sh
 cd indoor_gps_ros2_interface/src/x86/
 
 # Copy libdashapi.so to /usr/local/lib
+
 sudo cp libdashapi.so /usr/local/lib
+
+# Run application
 
 ./dashboard_x86
 
